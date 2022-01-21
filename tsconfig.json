@@ -1,0 +1,22 @@
+{
+    // 컴파일 포함
+    "include": [
+        "src/**/*.ts"
+    ],
+    // 컴파일 제외
+    "exclude": [
+        "node_modules",
+        "dist",
+    ],
+    // 컴파일 옵션
+    "compilerOptions": {
+        "outDir": "dist",
+        "target": "es5",
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "declaration": true
+    }
+}
