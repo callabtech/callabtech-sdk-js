@@ -2,6 +2,7 @@
   "name": "callabtech-sdk",
   "version": "1.0.0",
   "description": "callabtech sdk",
+  "main": "dist/index.js",
   "scripts": {
     "build": "rm -rf dist && tsc --build",
     "clean": "tsc --build --clean",
