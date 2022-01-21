@@ -1,7 +1,7 @@
 export const getApiUrl = () => {
-  const apiEnv = process.env.CALLABTECH_API_HOST ? process.env.CALLABTECH_API_HOST : '';
+  const sdkMode = process.env.CALLABTECH_SDK_MODE ? process.env.CALLABTECH_SDK_MODE : 'production';
 
-  if (apiEnv === 'development') {
+  if (sdkMode === 'development') {
     return 'http://localhost:3000';
   }
   
