@@ -1,3 +1,4 @@
+"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -34,7 +35,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-import fetch from 'cross-fetch';
+Object.defineProperty(exports, "__esModule", { value: true });
+var cross_fetch_1 = require("cross-fetch");
 var makeFetchHeaders = function (commonHeader) {
     var header = {};
     if (commonHeader && commonHeader.accessToken) {
@@ -52,7 +54,7 @@ var makeFetchBody = function (_a) {
     var fetchBody = JSON.stringify(body);
     return fetchBody;
 };
-export default {
+exports.default = {
     sendGetRequest: function (_a) {
         var url = _a.url, header = _a.header;
         return __awaiter(void 0, void 0, void 0, function () {
@@ -61,7 +63,7 @@ export default {
                 switch (_b.label) {
                     case 0:
                         fetchHeaders = makeFetchHeaders(header);
-                        return [4 /*yield*/, fetch(url, {
+                        return [4 /*yield*/, (0, cross_fetch_1.default)(url, {
                                 method: 'GET',
                                 headers: fetchHeaders
                             })];
@@ -90,7 +92,7 @@ export default {
                         if (body) {
                             fetchBody = makeFetchBody({ body: body });
                         }
-                        return [4 /*yield*/, fetch(url, {
+                        return [4 /*yield*/, (0, cross_fetch_1.default)(url, {
                                 method: 'POST',
                                 headers: fetchHeaders,
                                 body: fetchBody,
@@ -117,7 +119,7 @@ export default {
                 switch (_b.label) {
                     case 0:
                         fetchHeaders = makeFetchHeaders(header);
-                        return [4 /*yield*/, fetch(url, {
+                        return [4 /*yield*/, (0, cross_fetch_1.default)(url, {
                                 method: 'POST',
                                 headers: fetchHeaders,
                                 body: body,
@@ -147,7 +149,7 @@ export default {
                         if (body) {
                             fetchBody = makeFetchBody({ body: body });
                         }
-                        return [4 /*yield*/, fetch(url, {
+                        return [4 /*yield*/, (0, cross_fetch_1.default)(url, {
                                 method: 'PUT',
                                 headers: fetchHeaders,
                                 body: fetchBody,
@@ -174,7 +176,7 @@ export default {
                 switch (_b.label) {
                     case 0:
                         fetchHeaders = makeFetchHeaders(header);
-                        return [4 /*yield*/, fetch(url, {
+                        return [4 /*yield*/, (0, cross_fetch_1.default)(url, {
                                 method: 'DELETE',
                                 headers: fetchHeaders
                             })];

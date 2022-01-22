@@ -1,3 +1,4 @@
+"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -34,21 +35,23 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-import Sender from '../../lib/sender';
-import { getApiUrl } from '../../lib/url';
-export var addFiles = function (_a) {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.addFiles = void 0;
+var sender_1 = require("../../lib/sender");
+var url_1 = require("../../lib/url");
+var addFiles = function (_a) {
     var id = _a.id, files = _a.files;
     return __awaiter(void 0, void 0, void 0, function () {
         var url, formData, status;
         return __generator(this, function (_b) {
             switch (_b.label) {
                 case 0:
-                    url = "".concat(getApiUrl(), "/notices/").concat(id, "/files");
+                    url = "".concat((0, url_1.getApiUrl)(), "/notices/").concat(id, "/files");
                     formData = new FormData();
                     files.forEach(function (file) {
                         formData.append("files", file);
                     });
-                    return [4 /*yield*/, Sender.sendMultipartPostRequest({
+                    return [4 /*yield*/, sender_1.default.sendMultipartPostRequest({
                             url: url,
                             body: formData,
                             header: {
@@ -65,4 +68,5 @@ export var addFiles = function (_a) {
         });
     });
 };
+exports.addFiles = addFiles;
 //# sourceMappingURL=add-files.js.map

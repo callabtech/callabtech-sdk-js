@@ -1,3 +1,4 @@
+"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -34,17 +35,19 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-import Sender from '../../lib/sender';
-import { getApiUrl } from '../../lib/url';
-export var requestCalibrationEstimates = function (_a) {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.requestCalibrationEstimates = void 0;
+var sender_1 = require("../../lib/sender");
+var url_1 = require("../../lib/url");
+var requestCalibrationEstimates = function (_a) {
     var title = _a.title, contents = _a.contents, requesterName = _a.requesterName, companyName = _a.companyName, companyAddress = _a.companyAddress, contact = _a.contact, email = _a.email;
     return __awaiter(void 0, void 0, void 0, function () {
         var url, status;
         return __generator(this, function (_b) {
             switch (_b.label) {
                 case 0:
-                    url = "".concat(getApiUrl(), "/calibration-estimates");
-                    return [4 /*yield*/, Sender.sendPostRequest({
+                    url = "".concat((0, url_1.getApiUrl)(), "/calibration-estimates");
+                    return [4 /*yield*/, sender_1.default.sendPostRequest({
                             url: url,
                             body: {
                                 title: title,
@@ -68,4 +71,5 @@ export var requestCalibrationEstimates = function (_a) {
         });
     });
 };
+exports.requestCalibrationEstimates = requestCalibrationEstimates;
 //# sourceMappingURL=request-calibration-estimate.js.map

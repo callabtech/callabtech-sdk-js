@@ -1,9 +1,9 @@
-const CallabtechSDK = require("../dist/index.js")
+const { CallabtechSDK } = require("../dist/index.js")
 
 const test = async () => {
-    //const notices = await CallabtechSDK.getNotices();
+    const notices = await CallabtechSDK.getNotices();
 
-    console.log(Object.keys(CallabtechSDK))
+    console.log(notices);
 }
 
 test();
