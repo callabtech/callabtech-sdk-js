@@ -8,5 +8,5 @@ export const getApiUrl = (): string => {
     return `${host}:${port}`;
   }
   
-  return 'http://api.callabtech.com';
+  return 'https://api.callabtech.com';
 };

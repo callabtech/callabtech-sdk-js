@@ -8,7 +8,7 @@ var getApiUrl = function () {
         var port = process.env.CALLABTECH_SDK_PORT ? Number(process.env.CALLABTECH_SDK_PORT) : 3000;
         return "".concat(host, ":").concat(port);
     }
-    return 'http://api.callabtech.com';
+    return 'https://api.callabtech.com';
 };
 exports.getApiUrl = getApiUrl;
 //# sourceMappingURL=url.js.map
